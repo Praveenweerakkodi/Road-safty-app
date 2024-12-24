@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/peakpx"
+    tools:context=".UserHomePageActivity">
+
+    <!-- Header Section with Image and Welcome Message Overlay -->
+    <FrameLayout
+        android:id="@+id/headerSection"
+        android:layout_width="416dp"
+        android:layout_height="164dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Header Background Image -->
+
+        <!-- Overlay Welcome Message with Transparent Text -->
+        <ImageView
+            android:id="@+id/headerImage"
+            android:layout_width="match_parent"
+            android:layout_height="292dp"
+            android:contentDescription="Header Image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/user_header2" />
+
+    </FrameLayout>
+
+
+    <!-- Form Section with Six Stylish Buttons in Two Parallel Rows -->
+    <GridLayout
+        android:layout_width="349dp"
+        android:layout_height="519dp"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:layout_marginTop="24dp"
+        android:columnCount="2"
+        android:rowCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerSection"
+        app:layout_constraintVertical_bias="0.0">
+
+        <!-- Stylish Button 1 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/colorRedDark"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_camera"
+                app:tint="@color/colorBlack" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/colorPurpleDark"
+                android:elevation="6dp"
+                android:padding="10dp"
+                android:text="Upload Video"
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Stylish Button 2 -->
+        <LinearLayout
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_wallet"
+                app:tint="@color/colorBlack" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/colorPurpleDark"
+                android:elevation="6dp"
+                android:padding="10dp"
+                android:text="My Wallet"
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Stylish Button 3 -->
+        <LinearLayout
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_roadlaws"
+                app:tint="@color/colorBlack" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="140dp"
+                android:layout_height="74dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/colorPurpleDark"
+                android:elevation="6dp"
+                android:padding="10dp"
+                android:text="Road Laws"
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Stylish Button 4 -->
+        <LinearLayout
+            android:layout_width="123dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_police"
+                app:tint="@color/colorBlack" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="78dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/colorPurpleDark"
+                android:elevation="6dp"
+                android:padding="10dp"
+                android:text="Police Stations"
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Stylish Button 5 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="123dp"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_notification"
+                app:tint="@color/colorBlack" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="wrap_content"
+                android:layout_height="71dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/colorPurpleDark"
+                android:elevation="6dp"
+                android:padding="10dp"
+                android:text="Notifications"
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Stylish Button 6 -->
+        <LinearLayout
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_logout"
+                app:tint="@color/colorBlack" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="125dp"
+                android:layout_height="66dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/colorPurpleDark"
+                android:elevation="6dp"
+                android:padding="10dp"
+                android:text="Log Out"
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

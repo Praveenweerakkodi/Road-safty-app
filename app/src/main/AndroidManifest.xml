@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:enableOnBackInvokedCallback="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="ROAD"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RoadSafetyApp"
+        tools:targetApi="34">
+        <activity
+            android:name=".PoliceStationsActivity"
+            android:exported="false" />
+        <!-- Main Launcher Activity -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Other Activities -->
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".ForgotPasswordActivity" />
+        <activity android:name=".UserHomePageActivity" />
+        <activity android:name=".AdminLoginPageActivity" />
+        <activity android:name=".AdminForgotPasswordActivity" />
+        <activity android:name=".VideoUploadActivity" />
+        <activity android:name=".WalletActivity" />
+        <activity android:name=".NotificationsActivity" />
+        <activity android:name=".ManageUserActivity" />
+        <activity android:name=".InstructionsActivity" />
+        <activity android:name=".MyUploadsActivity" />
+        <activity android:name=".RoadLawsActivity" />
+        <activity android:name=".AdminDashboardActivity" />
+        <activity android:name=".ResetPasswordActivity" />
+        <activity android:name=".AdminVideoActivity" />
+        <activity android:name=".VideoPlayerActivity" />
+        <activity android:name=".LawDetailActivity" />
+        <activity android:name=".MainActivity" />
+
+
+
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+
+
+</manifest>

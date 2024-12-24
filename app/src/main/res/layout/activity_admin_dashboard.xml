@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@drawable/bb">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Admin Dashboard Title -->
+        <TextView
+            android:id="@+id/adminDashboardTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Admin Dashboard"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:textColor="@color/colorWhite" />
+
+        <!-- Section 1: View Videos -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_corner_box"
+            android:padding="16dp"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View Videos"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Access and review all uploaded videos."
+                android:textSize="16sp"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/viewVideosButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Go to View Videos"
+                android:backgroundTint="@color/colorRedDark"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                android:paddingHorizontal="24dp" />
+        </LinearLayout>
+
+        <!-- Section 2: Manage Users -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_corner_box"
+            android:padding="16dp"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Manage Users"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Manage registered users and their details."
+                android:textSize="16sp"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="4dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/manageUsersButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Go to Manage Users"
+                android:backgroundTint="@color/colorRedDark"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                android:paddingHorizontal="24dp" />
+        </LinearLayout>
+
+        <!-- Section 3: Add Violations Category -->
+
+        <!-- Section 4: Logout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_corner_box"
+            android:padding="16dp"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout from the admin dashboard."
+                android:textSize="16sp"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/logoutButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:backgroundTint="@color/colorRedDark"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                android:paddingHorizontal="24dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#f0f0f0">
+
+    <!-- VideoView for video playback -->
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/darker_gray" />
+
+    <!-- SeekBar for video progress -->
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Play and Pause buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="24dp">
+
+        <Button
+            android:id="@+id/playButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Play"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#4CAF50" />
+
+        <Button
+            android:id="@+id/pauseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pause"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#F44336" />
+    </LinearLayout>
+
+    <!-- Video Details section -->
+    <TextView
+        android:id="@+id/videoDetailsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="16dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:lineSpacingExtra="4dp"
+        android:textColor="@android:color/black"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        android:textAlignment="gravity" />
+
+    <!-- Below the videoDetailsTextView -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/acceptButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Accept"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#4CAF50" /> <!-- Green button -->
+
+        <Button
+            android:id="@+id/rejectButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reject"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#F44336" /> <!-- Red button -->
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/rewardsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rewards"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#2196F3" /> <!-- Blue button -->
+
+    <!-- Hidden View initially -->
+    <LinearLayout
+        android:id="@+id/rewardSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_marginTop="8dp">
+
+        <EditText
+            android:id="@+id/pointsEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Enter points"
+            android:textSize="18sp"
+            android:padding="8dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#4CAF50" /> <!-- Green button -->
+    </LinearLayout>
+
+
+</LinearLayout>

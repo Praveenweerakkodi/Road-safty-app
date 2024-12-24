@@ -1,0 +1,65 @@
+<!-- res/layout/item_user.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_corner_box"
+    android:padding="16dp"
+    android:layout_marginBottom="16dp">
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name: Kamal"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite" />
+
+    <TextView
+        android:id="@+id/userUserId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID No.: user"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/userUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username: user"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/userEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email: d@gmail.com"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="2dp" />
+
+    <TextView
+        android:id="@+id/userPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone: 1111111111"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="2dp" />
+
+    <TextView
+        android:id="@+id/userDistrict"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="District: P"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="2dp" />
+
+
+</LinearLayout>

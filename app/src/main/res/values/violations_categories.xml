@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="violation_categories">
+        <item>Select Category</item>
+        <item>Speeding</item>
+        <item>Running a Red Light</item>
+        <item>Illegal Parking</item>
+        <item>Reckless Driving</item>
+        <item>Drunk Driving</item>
+        <item>Ignoring Traffic Signs</item>
+        <item>Using a Mobile Phone While Driving</item>
+        <item>Wrong-Way Driving</item>
+        <item>Others</item>
+    </string-array>
+
+</resources>

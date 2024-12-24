@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/police_login_bg"
+    tools:context=".AdminLoginPageActivity">
+
+    <!-- Container for Centering Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Admin Portal Logo or Header -->
+        <ImageView
+            android:id="@+id/adminLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/police_logo"
+            />
+
+        <!-- Admin Portal Title -->
+        <TextView
+            android:id="@+id/adminLoginText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Police Department Admin Portal"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Username Input Field -->
+        <EditText
+            android:id="@+id/adminUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:textColorHint="@color/colorBlack"
+            android:drawableLeft="@drawable/ic_user"
+            android:drawableTint="@color/colorBlack"
+            android:drawablePadding="15dp"
+            android:padding="16dp"
+            android:background="@drawable/input_field_background"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            android:layout_marginBottom="20dp"
+            android:inputType="text" />
+
+        <!-- Password Input Field -->
+        <EditText
+            android:id="@+id/adminPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:textColorHint="@color/colorBlack"
+            android:drawableLeft="@drawable/lock"
+            android:drawableTint="@color/colorBlack"
+            android:drawablePadding="15dp"
+            android:padding="16dp"
+            android:background="@drawable/input_field_background"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            android:inputType="textPassword"
+            android:layout_marginBottom="30dp" />
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/colorPurpleDark" />
+
+        <!-- Forgot Password Link -->
+        <TextView
+            android:id="@+id/forgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password?"
+            android:textColor="@color/colorWhite"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

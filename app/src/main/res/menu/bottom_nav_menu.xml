@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_instructions"
+        android:icon="@drawable/ic_instructions"
+        android:title="Instructions" />
+    <item
+        android:id="@+id/navigation_upload"
+        android:icon="@drawable/ic_camera"
+        android:title="New Video Upload" />
+    <item
+        android:id="@+id/navigation_my_uploads"
+        android:icon="@drawable/ic_my_uploads"
+        android:title="My Uploads" />
+</menu>

@@ -1,0 +1,306 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".VideoUploadActivity">
+
+    <!-- LinearLayout to hold the content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:background="@drawable/video_description_bg">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:background="@drawable/video_description_bg">
+
+                <!-- Title for the Page -->
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upload Video"
+                    android:textSize="28sp"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp" />
+
+                <!-- Button to Record Video -->
+                <Button
+                    android:id="@+id/btnRecordVideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Record Video"
+                    android:drawableLeft="@drawable/ic_camera"
+                    android:padding="12dp"
+                    android:layout_below="@id/title"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="sans-serif"
+                    android:textAllCaps="false" />
+
+                <!-- Button to Select Video from Gallery -->
+                <Button
+                    android:id="@+id/btnSelectVideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select Video from Gallery"
+                    android:drawableLeft="@drawable/ic_folder"
+                    android:padding="12dp"
+                    android:layout_below="@id/btnRecordVideo"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="sans-serif"
+                    android:textAllCaps="false" />
+
+                <!-- FrameLayout to Hold VideoView and Play Button -->
+                <FrameLayout
+                    android:id="@+id/videoContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_below="@id/btnSelectVideo"
+                    android:layout_marginTop="16dp"
+                    android:layout_centerHorizontal="true">
+
+                    <!-- VideoView to Preview Selected/Recorded Video -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/videoLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <!-- Video View -->
+                        <VideoView
+                            android:id="@+id/videoView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent" />
+
+                        <ImageButton
+                            android:id="@+id/btnResizeVideo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_margin="8dp"
+                            android:background="@android:color/transparent"
+                            android:contentDescription="Resize Video"
+                            android:src="@drawable/ic_fullscreen"
+                            tools:ignore="MissingConstraints" />
+
+                        <!-- Play Button -->
+                        <ImageButton
+                            android:id="@+id/btnPlayVideoInside"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="Play Video"
+                            android:src="@drawable/ic_play_circle"
+                            android:background="@android:color/transparent"
+                            android:visibility="gone"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </FrameLayout>
+
+                <!-- Video Duration Text -->
+                <TextView
+                    android:id="@+id/videoDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/videoContainer"
+                    android:layout_marginTop="10dp"
+                    android:text="Duration: 0:00"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium" />
+
+                <!-- Video Size Text -->
+                <TextView
+                    android:id="@+id/videoSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/videoDuration"
+                    android:layout_marginTop="5dp"
+                    android:text="Size: 0 MB"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium" />
+
+                <!-- Incident Date Field -->
+                <TextView
+                    android:id="@+id/txtDateLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Incident Date"
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@android:color/white"
+                    android:layout_below="@id/videoSize"
+                    android:layout_marginTop="20dp" />
+
+                <Button
+                    android:id="@+id/btnSelectDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDateLabel"
+                    android:text="Choose Date"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginBottom="15dp" />
+
+                <!-- Time Picker Field -->
+                <TextView
+                    android:id="@+id/txtTimeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time"
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@android:color/white"
+                    android:layout_below="@id/btnSelectDate"
+                    android:layout_marginTop="10dp" />
+
+                <Button
+                    android:id="@+id/btnSelectTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtTimeLabel"
+                    android:text="Choose Time"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginBottom="15dp" />
+
+                <!-- Violation Category Label -->
+                <TextView
+                    android:id="@+id/txtViolationCategoryLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Violation Category"
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@android:color/white"
+                    android:layout_below="@id/btnSelectTime"
+                    android:layout_marginTop="10dp" />
+
+                <!-- Dropdown (Spinner) for selecting Violation Category -->
+                <Spinner
+                    android:id="@+id/spinnerViolationCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtViolationCategoryLabel"
+                    android:layout_marginTop="8dp"
+                    android:popupBackground="@color/colorWhite"
+                    android:textColor="@color/colorBlack"
+                    android:padding="10dp"
+                    android:spinnerMode="dropdown" />
+
+                <!-- Place Input Field -->
+                <TextView
+                    android:id="@+id/txtPlaceLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Near City"
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@android:color/white"
+                    android:layout_below="@id/spinnerViolationCategory"
+                    android:layout_marginTop="10dp" />
+
+                <EditText
+                    android:id="@+id/etPlace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter place"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@android:color/white"
+                    android:layout_below="@id/txtPlaceLabel"
+                    android:layout_marginBottom="15dp" />
+
+                <!-- Description Input Field -->
+                <TextView
+                    android:id="@+id/txtDescriptionLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@android:color/white"
+                    android:layout_below="@id/etPlace"
+                    android:layout_marginTop="10dp" />
+
+                <EditText
+                    android:id="@+id/etDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter description"
+                    android:lines="3"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@android:color/white"
+                    android:layout_below="@id/txtDescriptionLabel"
+                    android:layout_marginBottom="15dp" />
+
+                <TextView
+                    android:id="@+id/txtUserIdLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="UserID"
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@android:color/white"
+                    android:layout_below="@id/etDescription"
+                    android:layout_marginTop="10dp" />
+
+                <EditText
+                    android:id="@+id/etUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your Username"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@android:color/white"
+                    android:layout_below="@id/txtUserIdLabel"
+                    android:layout_marginBottom="15dp" />
+
+                <!-- Submit Button -->
+                <Button
+                    android:id="@+id/btnUpload"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="@color/colorGrayDark"
+                    android:text="Upload Video"
+                    android:layout_below="@id/etUsername"
+                    android:textColor="@android:color/white" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPurpleDark"
+        app:menu="@menu/bottom_nav_menu" />
+</LinearLayout>

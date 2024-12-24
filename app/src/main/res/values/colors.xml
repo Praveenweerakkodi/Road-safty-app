@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#3262C4</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorRed">#C11515</color>
+    <color name="colorRedDark">#732c27</color>
+    <color name="colorPurpleDark">#c746be</color>
+    <color name="colorGrayDark">#4b494d</color>
+    <color name="backgroundColor">#F5F5F5</color>
+    <color name="primaryTextColor">#333333</color>
+    <color name="buttonColor">#6200EE</color>
+    <color name="videoViewBorderColor">#CCCCCC</color>
+    <color name="colorGrayLight">#5c5857</color>
+
+</resources>

@@ -1,0 +1,26 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <!-- Gradient Background -->
+            <gradient
+                android:angle="45"
+                android:endColor="#eb2a15"
+                android:startColor="#eb2a15"
+                android:type="linear" />
+
+            <!-- Rounded Corners -->
+            <corners android:radius="20dp" />
+
+            <!-- Button Padding -->
+            <padding
+                android:left="16dp"
+                android:top="10dp"
+                android:right="16dp"
+                android:bottom="10dp" />
+
+            <!-- Shadow Effect -->
+            <solid android:color="#55000000" />
+            <size android:width="4dp" android:height="4dp" />
+        </shape>
+    </item>
+</selector>
